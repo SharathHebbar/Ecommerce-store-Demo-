@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Join Collision</title>
+<style type="text/css">
+		
+
+body { 
+  align-items: center;
+  width: 99%;
+  height:100%;
+  font-family: 'Open Sans', sans-serif;
+  
+ 
+}
+
+select{
+	border: 2px solid #00FF7F;
+	width: 10%;
+}
+
+input[type=text],input[name=pass]{
+width: 30%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 2px solid #00FF7F;
+box-sizing: border-box;
+}
+
+input[type=text]:focus,
+input[name=pass]:focus{
+	width:50% ;
+}
+
+
+button{
+	
+	background-color: #00FF7F;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	
+	cursor: pointer;
+	width: 30%;
+
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+	letter-spacing: 4px;
+	border:none;
+	outline: 0;
+	border-radius: 55px;
+	font-weight: bold;
+	font-family: georgia, "Times New Roman", Times,serif;
+
+}
+button:hover{
+	opacity: 0.8;
+	background: #03e9f4;
+	color: #fff;
+	box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+
+.all{
+	border: 1px solid #03e9f4;
+	border-radius: 100px;
+	border-width: thin;
+	}
+
+</style>
+</head>
+<body>
+<form method="POST" action="Demo.html">
+<center>
+<div class="all">
+<br>
+<div class="header">
+<img src="c.jpg" name="collision" alt="collision" width="20%">
+</div>
+<br>
+
+<div class="box">
+
+<input type ="text" placeholder="UserName" pattern="[A-Za-z]{,3}" title="Enter valid name" name ="name" required>  
+<br/>
+
+<input type ="text" placeholder="Enter E-mail id" name ="email" data-type = "E-mail" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title = "Enter a valid email" required>
+<br/>
+<input type ="Password" placeholder="Enter Password" name ="pass" data-type = "Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+<br/>
+
+</div>
+
+<div class="Location">
+	<select id="Country" required="required">
+  <option selected="selected" disabled="disabled">Choose Country</option>
+  <option value="India">India</option>
+</select>
+
+<select id="State" required="required">
+  <option selected="selected" disabled="disabled">Choose State</option>
+  <option value="Karnataka">Karnataka</option>
+</select>
+
+<select id="City" required="required">
+  <option selected="selected" disabled="disabled">Choose City</option>
+  <option value="Bengaluru">Bengaluru</option>
+</select>
+
+</div>
+
+<div class="box">
+<br/>
+	<input type ="text" placeholder="Address" pattern="[A-Za-z0-9._%+-#,]{,3}" title="Enter valid address" name ="Address" required>  
+	<br>
+	<input type="text" name="pincode" placeholder="Pincode" title="Enter valid pincode" pattern="[0-9]{,3}-[0-9]{,3}">
+<br/>
+</div>
+<div class="submit">
+	<br>
+<button type="submit" name="Create">Create your Account</button>
+<br>
+<br>
+</div>
+
+
+</div>
+</center>
+</form>
+</body>
+</html>
